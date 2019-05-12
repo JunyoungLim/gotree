@@ -9,11 +9,31 @@ type BST struct {
 	root *BSTNode
 }
 
+// Root returns the root node of this BST.
+func (tree *BST) Root() *BSTNode {
+	return tree.root
+}
+
 // BSTNode is a Binary Search Tree Node.
 type BSTNode struct {
 	value Element
 	left  *BSTNode
 	right *BSTNode
+}
+
+// Value returns the element value stored in this node.
+func (head *BSTNode) Value() Element {
+	return head.value
+}
+
+// Left returns the left child node of this node.
+func (head *BSTNode) Left() *BSTNode {
+	return head.left
+}
+
+// Right returns the right child node of this node.
+func (head *BSTNode) Right() *BSTNode {
+	return head.right
 }
 
 // NewBST returns a new Binary Search Tree created from the given
